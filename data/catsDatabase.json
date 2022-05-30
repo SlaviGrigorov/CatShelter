@@ -1,0 +1,51 @@
+[
+    {
+        "imgURL": "https://ichef.bbci.co.uk/news/976/cpsprodpb/12A9B/production/_111434467_gettyimages-1143489763.jpg",
+        "name": "Pretty Kitty",
+        "breed": "Bombay Cat",
+        "description": "Dominant and aggressive to other cats. Will probably eat you in your sleep. Very cute tho.",
+        "id": 0
+    },
+    {
+        "imgURL": "https://cdn.pixabay.com/photo/2015/06/19/14/20/cat-814952_1280.jpg",
+        "name": "Lazy Kitty",
+        "breed": "Bombay Cat",
+        "description": "Dominant and aggressive to other cats. Will probably eat you in your sleep. Very cute tho.",
+        "id": 1
+    },
+    {
+        "imgURL": "https://cdn.pixabay.com/photo/2018/08/08/05/12/cat-3591348_1280.jpg",
+        "name": "Snowbell",
+        "breed": "Bombay Cat",
+        "description": "Dominant and aggressive to other cats. Will probably eat you in your sleep. Very cute tho.",
+        "id": 2
+    },
+    {
+        "imgURL": "https://cdn.pixabay.com/photo/2017/02/20/18/03/cat-2083492_1280.jpg",
+        "name": "Larry",
+        "breed": "Bombay Cat",
+        "description": "Dominant and aggressive to other cats. Will probably eat you in your sleep. Very cute tho.",
+        "id": 3
+    },
+    {
+        "name": "Abi",
+        "description": "Very lovely cat",
+        "imgURL": "https://static.toiimg.com/photo/msid-72295960/72295960.jpg?545889",
+        "breed": "Fluffy Cat",
+        "id": "4"
+    },
+    {
+        "name": "Jerry",
+        "description": "Agressive cat.",
+        "imgURL": "https://www.purina-arabia.com/sites/default/files/2020-12/Understanding%20Your%20Cat%27s%20Body%20LanguageHERO.jpg",
+        "breed": "Street Cat",
+        "id": 5
+    },
+    {
+        "name": "Qna",
+        "description": "cute",
+        "imgURL": "https://www.rd.com/wp-content/uploads/2021/01/GettyImages-1175550351.jpg",
+        "breed": "Street Queen",
+        "id": "6"
+    }
+]

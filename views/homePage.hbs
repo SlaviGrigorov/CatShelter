@@ -1,0 +1,14 @@
+<form action="/search" method="GET">
+    <input type="text" name="name">
+    <button type="submit">Search</button>
+</form>
+
+<main>
+    <section class="cats">
+        <ul>
+            {{#each cats}}
+                {{> catTemplate}}
+            {{/each}}
+        </ul>
+    </section>
+</main>
