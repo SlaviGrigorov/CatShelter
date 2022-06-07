@@ -3,11 +3,11 @@ const fs = require('fs');
 
 let breeds = require('../data/breeds.json');
 
-app.get('/cats/add-breed', (req,res) => {
+router.get('/cats/add-breed', (req,res) => {
     res.render('addBreed');
 });
 
-app.post('/cats/add-breed', (req, res) => {
+router.post('/cats/add-breed', (req, res) => {
     let newBreed = req.body.name;
 
     if (newBreed.length > 0 && !breeds.includes(newBreed)) {

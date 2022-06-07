@@ -3,7 +3,7 @@ const fs = require('fs');
 
 let cats = require('../data/catsDatabase.json');
 
-app.get('/cats/delete/:id', (req, res) => {
+router.get('/cats/delete/:id', (req, res) => {
     const catId = req.params.id;
     cats = cats.filter(cat => cat.id != catId);
 
