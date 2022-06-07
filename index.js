@@ -30,7 +30,7 @@ app.get('/', (req,res) => {
 
 app.get('/cats/add-cat', (req,res) => {
     res.render('addCat', { breeds });
-})
+});
 
 app.post('/cats/add-cat', (req,res) => {
     let newCat = req.body;
@@ -49,11 +49,11 @@ app.post('/cats/add-cat', (req,res) => {
         }
     }
     res.redirect('/');
-})
+});
 
 app.get('/cats/add-breed', (req,res) => {
     res.render('addBreed');
-})
+});
 
 app.post('/cats/add-breed', (req, res) => {
     let newBreed = req.body.name;
@@ -70,14 +70,14 @@ app.post('/cats/add-breed', (req, res) => {
     } else {
         return res.status(400).send('Breed already registered or empty field sent');
     }
-})
+});
 
 app.get('/cats/edit/:id', (req, res) => {    
     let catId = req.params.id;
     let cat = cats[catId];
     res.render('editCat', { breeds, cat })
     console.log(cats[catId]);
-})
+});
 
 app.post('/cats/edit/:id', (req, res) => {
     let updatedCat = req.body;
@@ -92,7 +92,22 @@ app.post('/cats/edit/:id', (req, res) => {
         console.log(err);
     }
     res.redirect('/');
-    console.log(cats);
-})
+    // console.log(cats);
+});
+
+app.get('/cats/delete/:id', (req, res) => {
+    const catId = req.params.id;
+    cats = cats.filter(cat => cat.id != catId);
+
+    let jsonData = JSON.stringify(cats, "", 4);
+
+    try {
+        fs.writeFile('./data/catsDatabase.json', jsonData, (err) => err? console.log(err): true);
+    } catch(err){
+        console.log(err);
+    }
+    res.redirect('/');
+    // console.log(cats);
+});
 
 app.listen(port, () => console.log(`Server is listening on ${port}...`));
