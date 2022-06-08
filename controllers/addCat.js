@@ -6,7 +6,6 @@ let breeds = require('../data/breeds.json');
 
 
 router.get('/', (req,res) => {
-    console.log("Get add cat")
     res.render('addCat', { breeds });
 });
 

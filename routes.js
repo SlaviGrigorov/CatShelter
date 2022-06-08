@@ -10,11 +10,13 @@ const addCatController = require('./controllers/addCat');
 const addBreedController = require('./controllers/addBreed');
 const editCatController = require('./controllers/editCat');
 const deleteCatController = require('./controllers/deleteCat');
+const searchCat = require('./controllers/searchCat');
 
 router.use('/cats/add-cat', addCatController);
 router.use('/cats/add-breed', addBreedController);
 router.use('/cats/edit', editCatController);
 router.use('/cats/delete', deleteCatController);
+router.use('/search', searchCat);
 
 
 module.exports = router;
