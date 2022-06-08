@@ -4,14 +4,14 @@ const fs = require('fs');
 let cats = require('../data/catsDatabase.json');
 let breeds = require('../data/breeds.json');
 
-router.get('/cats/edit/:id', (req, res) => {    
+router.get('/:id', (req, res) => {    
     let catId = req.params.id;
     let cat = cats[catId];
     res.render('editCat', { breeds, cat })
     console.log(cats[catId]);
 });
 
-router.post('/cats/edit/:id', (req, res) => {
+router.post('/:id', (req, res) => {
     let updatedCat = req.body;
     updatedCat.id = req.params.id;
     cats.splice(updatedCat.id, 1, updatedCat)

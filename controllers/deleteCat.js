@@ -3,7 +3,7 @@ const fs = require('fs');
 
 let cats = require('../data/catsDatabase.json');
 
-router.get('/cats/delete/:id', (req, res) => {
+router.get('/:id', (req, res) => {
     const catId = req.params.id;
     cats = cats.filter(cat => cat.id != catId);
 
@@ -15,7 +15,6 @@ router.get('/cats/delete/:id', (req, res) => {
         console.log(err);
     }
     res.redirect('/');
-    // console.log(cats);
 });
 
 module.exports = router; 
